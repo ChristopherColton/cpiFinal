@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>yo</title>
+
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+<!-- <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/ui/4.6.1/firebase-ui-auth.js"></script> -->
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<!-- <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-analytics.js"></script> -->
+
+
+
+<script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/6.2.4/firebase-auth.js"></script>
+  <!-- firebaseUI -->
+  <script src="https://cdn.firebase.com/libs/firebaseui/4.0.0/firebaseui.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  var firebaseConfig = {
+    apiKey: "AIzaSyAVtajZDXFbt4DjZ2HqxfRf7guUnBHIqZU",
+    authDomain: "lfgg-89dc7.firebaseapp.com",
+    databaseURL: "https://lfgg-89dc7.firebaseio.com",
+    projectId: "lfgg-89dc7",
+    storageBucket: "lfgg-89dc7.appspot.com",
+    messagingSenderId: "31051111563",
+    appId: "1:31051111563:web:575ef4dcc003d368cdc88e",
+    measurementId: "G-DN1Z2JZP4R"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+</script>
+
+
+  </head>
+  <body>
+    <title>LFG</title>
+
+
+
+    <header>
+      <div id="head1" class="fixed-header">
+        <nav>
+          <ul>
+            <li id="navButton"><a href="index.html">Home</a></li>
+            <li id="navButton"><a href="about.html">About Us</a></li>
+            <li id="navButton"><a href="feedback.html">Feedback</a></li>
+            <li id="navButton"><a href="groupPage.html">Groups</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <img class="logo1" src="https://cdn.discordapp.com/attachments/762842241366360078/766805226396975114/LFG_Logo.png"/>
+    
+    <main>
+    <!-- The right side of the page -->
+    <div class="right_side">
+    
+      <!-- this is a divider section -->
+      <div class="my_top_section">
+
+        <!-- This is a title -->
+        <h1>Looking for group (LFG)</h1>
+        
+        <!-- project info -->
+        <p>Our projects goal is to help create study groups in the world of online classes. 
+          Due to the coronavirus, classes have gone online, because of this many students 
+          are struggling to meet people and create these study groups.</p>
+        
+      </div>
+      
+      
+      <!-- list -->
+      <h2>About This project</h2>
+      <ul>
+        <li>Listing classes and allowing the students to join those classes.</li>
+        <li>Having boards to ask questions for certain classes</li>
+        <li>Allow them to set up different study groups for each class</li>
+      </ul>
+
+      <br><br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <p>Login with Firebase</p>
+    <h3 id="google-displayName"></h3>
+    <img id="google-pic" src="" />
+    <p id = "google-email"></p>
+    <button 
+                class="btn btn-primary"
+                id="google-signin" 
+                onclick={signInWithGoogle()}
+            >
+                Sign In With Google
+            </button>
+            <button 
+                class="btn btn-"
+                id="signout" 
+                onclick={signOut()}
+                style="display: none; visibility: hidden;"
+            >
+                Sign Out
+            </button>
+
+    <script src = "js/firebaseAuth.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <
+  </body>
+</html>

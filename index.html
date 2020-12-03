@@ -1,0 +1,75 @@
+<html> 
+    <head>
+        
+        <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-firestore.js"></script>
+
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+
+        <!-- top nav header -->
+        <header>
+            <div id="head1" class="fixed-header">
+              <nav>
+                <ul>
+                  <li id="navButton"><a href="index.html">Home</a></li>
+                  <li id="navButton"><a href="about.html">About Us</a></li>
+                  <li id="navButton"><a href="feedback.html">Feedback</a></li>
+                  <li id="navButton"><a href="groupPage.html">Groups</a></li>
+                </ul>
+              </nav>
+            </div>
+          </header>
+        
+
+        <button onClick="signIn()">Sign in</button>
+        <h1>LFG</h1>
+
+        <div class="content">
+
+            <form id="add-group-form">
+                
+                <!--<label for="name"> Enter a Group Name: </label>
+                <label for="class"> Enter the name of a Course </label>
+                <label for="professor"> Enter a Group Name: </label> -->
+
+
+
+                <input type="text" id="name" name="name" placeholder="Group Name">
+                <input type="text" id="class" name="class" placeholder="Course Name">
+                <input type="text" id="professor" name="professor" placeholder="Professor">
+                <button type="submit">Add Group</button>
+
+                
+            </form>
+            
+            <ul id="group-list" onclick="buttonAdd()"></ul>
+        
+        </div>
+
+
+
+
+
+
+<script>
+  //config firebase
+  var firebaseConfig = {
+    apiKey: "AIzaSyCyJmTZRhjSRKJe7MjIk_PROfijDi4eEW0",
+    authDomain: "lfgdatabase-8b49f.firebaseapp.com",
+    databaseURL: "https://lfgdatabase-8b49f.firebaseio.com",
+    projectId: "lfgdatabase-8b49f",
+    storageBucket: "lfgdatabase-8b49f.appspot.com",
+    messagingSenderId: "461666666310",
+    appId: "1:461666666310:web:29b6f4613144f8292f8747"
+  };
+  firebase.initializeApp(firebaseConfig);
+  const db = firebase.firestore();
+  db.settings({timestampInSnapshots: true});
+</script>
+        <script src="app.js"></script>
+        
+
+    </body>
+</html>
